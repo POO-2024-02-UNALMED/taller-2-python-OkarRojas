@@ -38,7 +38,7 @@ class Auto:
         j =len(filtered_list)
         return j
 
-    def Integridad(self):
+    def verificarIntegridad(self):
         for asiento in self.asientos:
             if isinstance(asiento, Asiento):
                 if asiento.registro != self.motor.registro:
