@@ -64,8 +64,3 @@ class Motor:
         if tipo in Motor.tiposPosibles:
             self.tipo: str = tipo
 
-a = Auto("model 3", 33000, list(),"tesla", Motor(4, "electrico", 142), 341)
-    
-a.asientos = [Asiento("blanco", 5000, 435),None, None, Asiento("blanco", 5000, 435), None]
-
-print(a.cantidadAsientos())
