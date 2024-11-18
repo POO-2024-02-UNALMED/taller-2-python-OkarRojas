@@ -4,7 +4,7 @@ class Asiento:
         self.precio= precio
         self.registro = registro
 
-    def cambio_de_color(self, color):
+    def cambiarColor(self, color):
         list= ["rojo", "verde", "amarillo", "negro", "blanco"]
         hay = True
         for i in list:
@@ -21,7 +21,7 @@ class Auto:
 
     cantidad_creados= ""
 
-    def __init__(self, modelo, precio, asientos : list[Asiento], Motor, registro):
+    def __init__(self, modelo, precio, asientos : list[Asiento],Motor, registro):
 
         self.modelo = modelo
         self.precio = precio
@@ -61,5 +61,4 @@ class Motor:
     def asignarTipo(self, tipo: str) -> None:
         if tipo in Motor.tiposPosibles:
             self.tipo: str = tipo
-
 
