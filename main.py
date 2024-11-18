@@ -10,12 +10,12 @@ class Asiento:
         for i in list:
             if i == color:
                 self.color=i
-                print(self.color)
+                return self.color
             else:
                 hay = False
 
         if hay == False:
-            print("no hay ese color")
+            pass
 
 class Auto:
 
@@ -34,7 +34,7 @@ class Auto:
 
     def cantidadAsientos(self):
         j =len(self.asientos)
-        print(j)
+        return j
 
     def Integridad(self):
         for asiento in self.asientos:
