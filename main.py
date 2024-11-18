@@ -21,7 +21,7 @@ class Auto:
 
     cantidad_creados= ""
 
-    def __init__(self, modelo, precio, asientos : list[Asiento],Motor, registro):
+    def __init__(self, modelo, precio, asientos, marca, Motor, registro):
 
         self.modelo = modelo
         self.precio = precio
@@ -33,7 +33,9 @@ class Auto:
         self.registro = registro
 
     def cantidadAsientos(self):
-        j =len(self.asientos)
+
+        filtered_list = list(filter(lambda x: x is not None, self.asientos))
+        j =len(filtered_list)
         return j
 
     def Integridad(self):
@@ -62,3 +64,8 @@ class Motor:
         if tipo in Motor.tiposPosibles:
             self.tipo: str = tipo
 
+a = Auto("model 3", 33000, list(),"tesla", Motor(4, "electrico", 142), 341)
+    
+a.asientos = [Asiento("blanco", 5000, 435),None, None, Asiento("blanco", 5000, 435), None]
+
+print(a.cantidadAsientos())
