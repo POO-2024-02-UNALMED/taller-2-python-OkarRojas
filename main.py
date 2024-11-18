@@ -21,14 +21,14 @@ class Auto:
 
     cantidad_creados= ""
 
-    def __init__(self, modelo, precio, colorA,asientos : list[Asiento],Motor,  marca, registro):
+    def __init__(self, modelo, precio, asientos : list[Asiento], Motor, registro):
 
         self.modelo = modelo
         self.precio = precio
-        self.colorA = colorA
+       
        
         self.asientos: list[Asiento] = asientos
-        self.marca = marca
+        
         self.motor = Motor
         self.registro = registro
 
